@@ -37,6 +37,23 @@ This documentation will guide you through the usage and installation of rpm. It 
   <br>
   <br>
   <pre class="prettyprint">rpm</pre> Shows commands
+  <h2>Making and submitting a basic package</h2>
+  <hr size="1" width="100%" color="black">
+  So, you feel like you want to create a package for rpm, then you must first complete these simple steps
+  <br>
+  You will need:
+  <ul>
+    <li>Some C# knowledge</li>
+    <li>Some knowledge in ReCT package making, more on <a href="https://rect.ml">rect.ml</a></li>
+  </ul>
+  <ol>
+    <li>Create your standard ReCT package</li>
+    <li>In the same folder as the package, also add a folder called [packagename]-DEPS, in wich you replace [packagename] with your packages .dll name</li>
+    <li>Also add a file called deps.dps</li>
+    <li>Now, if you need to add any dependecies, drop them into [packagename]-DEPS, and then add the filename to deps.dps, seperate with new lines</li>
+    <li>To submit, please add [packagename].dll, deps.dps and [packagename]-DEPS into a zip file</li>
+    <li>Then, finally fill in <a href="https://forms.gle/1HpLd7vfnogb3J388">this google form</a> and make sure to upload your .zip</li>
+  <ol>
 </body>
 <hr size="1" width="100%" color="black">
-  <h6>Site ver: 0.2</h6>
+  <h6>Site ver: 0.3</h6>
