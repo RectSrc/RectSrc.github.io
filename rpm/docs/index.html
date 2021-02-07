@@ -61,6 +61,9 @@ This documentation will guide you through the usage and installation of rpm. It 
   <br>
   <br>
   <pre class="prettyprint">rpm remove [name]</pre> Removes the package [name]
+   <br>
+  <br>
+  <pre class="prettyprint">rpm update [name]</pre> Updates the package [name]
   <br>
   <br>
   <pre class="prettyprint">rpm</pre> Shows commands
@@ -75,12 +78,13 @@ This documentation will guide you through the usage and installation of rpm. It 
   </ul>
   <ol>
     <li>Create your standard ReCT package</li>
-    <li>In the same folder as the package, also add a folder called [packagename]-DEPS, in wich you replace [packagename] with your packages .dll name</li>
-    <li>Also add a file called deps.dps</li>
-    <li>Now, if you need to add any dependecies, drop them into [packagename]-DEPS, and then add the filename to deps.dps, seperate with new lines</li>
-    <li>To submit, please add [packagename].dll, deps.dps and [packagename]-DEPS into a zip file</li>
+    <li>Add a file called package.json</li>
+    <li>In package.json, paste in <pre class="prettyprint">{"packageVerison":[latest],"dependencies":["exampledep", "otherdep"]}</pre></li>
+    <li>Replace [latest] with the latest package verison, can be gotten in the RPM releases page</li>
+    <li>Replace exampledep and otherdep with your deps and of course the package dll file. More files can be added by adding a comma then the name in "'s.
+      You can state paths like /deps/example.dll if you want to.</li>
     <li>Then, finally fill in <a href="https://forms.gle/1HpLd7vfnogb3J388">this google form</a> and make sure to upload your .zip</li>
   </ol>
 </body>
 <hr size="1" width="100%" color="black">
-  <h6>Site verison: 1.1</h6>
+  <h6>Site verison: 1.2</h6>
