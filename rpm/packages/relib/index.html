@@ -1,0 +1,80 @@
+<style>
+a:link {
+  color: #0000EE;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0000EE;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0000EE;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #0000EE;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+
+
+<title>relib</title>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+<link rel="icon" type="image/png" href="../rectsrc.png"/>
+<font face="Helvetica", size="18">
+<body>
+<h1>relib</h1>
+<hr size="1" width="100%" color="black">
+<pre class="prettyprint">rpm install relib</pre>
+<hr size="1" width="100%" color="black">
+Relib is a port of Raylib for ReCT, it allows for full 2D and 3D rendering.
+<h1>GETTING STARTED</h1>
+Windows: if youre on Windows you will need to inlude these files
+<pre class="prettyprint">
+package dll Relib; use Relib;
+
+#copy("Raylib-cs.dll");
+#copy("raylib.dll");
+</pre>
+
+Linux: on linux you'll need these files:
+<pre class="prettyprint">
+package dll Relib; use Relib;
+
+#copy("Raylib-cs.dll");
+#copy("libraylib.so");
+</pre>
+
+
+tip! -> you can include both raylib.dll and libraylib.so and it will work on both plattforms!
+
+Simple start script
+<pre class="prettyprint">
+package dll Relib; use Relib;
+
+#copy("libraylib.so");
+#copy("Raylib-cs.dll");
+
+Relib::InitWindow(500, 500, "Relib window");
+Relib::SetTargetFPS(60);
+
+while(!Relib::WindowShouldClose())
+{
+    Relib::BeginDrawing();
+    Relib::ClearBackground(make Color(0, 0, 0, 255));
+
+    Relib::EndDrawing();
+}
+
+Relib::CloseWindow();
+</pre>
+
+this will create a 500x500 pixel black window
+<hr size="1" width="100%" color="black">
