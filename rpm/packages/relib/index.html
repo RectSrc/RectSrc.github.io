@@ -77,4 +77,22 @@ Relib::CloseWindow();
 </pre>
 
 this will create a 500x500 pixel black window
+
+  <h3>Window state flags:</h3>
+<pre class="prettyprint">
+    FLAG_VSYNC_HINT = 64, // 0x00000040
+    FLAG_FULLSCREEN_MODE = 2,
+    FLAG_WINDOW_RESIZABLE = 4,
+    FLAG_WINDOW_UNDECORATED = 8,
+    FLAG_WINDOW_HIDDEN = 128, // 0x00000080
+    FLAG_WINDOW_MINIMIZED = 512, // 0x00000200
+    FLAG_WINDOW_MAXIMIZED = 1024, // 0x00000400
+    FLAG_WINDOW_UNFOCUSED = 2048, // 0x00000800
+    FLAG_WINDOW_TOPMOST = 4096, // 0x00001000
+    FLAG_WINDOW_ALWAYS_RUN = 256, // 0x00000100
+    FLAG_WINDOW_TRANSPARENT = 16, // 0x00000010
+    FLAG_WINDOW_HIGHDPI = 8192, // 0x00002000
+    FLAG_MSAA_4X_HINT = 32, // 0x00000020
+    FLAG_INTERLACED_HINT = 65536, // 0x00010000
+</pre>
 <hr size="1" width="100%" color="black">
